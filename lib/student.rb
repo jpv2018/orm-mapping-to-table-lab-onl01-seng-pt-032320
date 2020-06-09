@@ -1,4 +1,7 @@
 class Student
+  
+  attr_accessor :name, :grade, :id
+  
   def initialize(name, grade, id=nil)
     @name = name
     @grade = grade
@@ -14,7 +17,6 @@ class Student
     )
     SQL
     DB[:conn].execute(sql)
-    binding.pry
   end
   
   def self.drop_table
