@@ -33,7 +33,7 @@ class Student
     VALUES (?, ?)
     SQL
     DB[:conn].execute(sql, self.name, self.grade)
-    @id = DB[:conn].execute
+    @id = DB[:conn].execute("SELECT LAST ID")
   end
   
   def self.create(name, grade)
